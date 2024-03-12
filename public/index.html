@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelly Scraper</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        button[disabled] {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        #logOutput { 
+            width: 100%;
+            height: 300px;
+            background-color: #000;
+            color: #0f0;
+            overflow: scroll;
+            white-space: pre;
+            font-family: monospace;
+        }
+        .device { margin-bottom: 10px; }
+        .device-status { color: grey; }
+        .device-error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Shelly Scraper</h1>
+    <button id="toggleFetch">Start</button>
+    <button id="getStatus" disabled>Status abfragen</button>
+    <button id="refreshDevices">Geräte aktualisieren</button>
+    <h2>Gerätestatus</h2>
+    <div id="devices"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
